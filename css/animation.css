@@ -1,0 +1,245 @@
+/* ===========================
+   Fade In
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ===========================
+   Slide Up
+=========================== */
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Slide Left
+=========================== */
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===========================
+   Slide Right
+=========================== */
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* ===========================
+   Glow
+=========================== */
+
+@keyframes glow{
+
+    0%{
+        box-shadow:0 0 10px #38bdf8;
+    }
+
+    50%{
+        box-shadow:0 0 30px #38bdf8;
+    }
+
+    100%{
+        box-shadow:0 0 10px #38bdf8;
+    }
+
+}
+
+/* ===========================
+   Hero Animation
+=========================== */
+
+.left{
+
+    animation:slideLeft 1s ease;
+
+}
+
+.right{
+
+    animation:slideRight 1s ease;
+
+}
+
+.right img{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+section{
+
+    animation:fadeIn 1s ease;
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card{
+
+    animation:slideUp .8s ease;
+
+}
+
+.project{
+
+    animation:slideUp .8s ease;
+
+}
+
+/* Hover Effect */
+
+.card:hover{
+
+    transform:translateY(-15px) scale(1.05);
+
+}
+
+.project:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.btn{
+
+    animation:glow 2s infinite;
+
+}
+
+.btn:hover{
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================
+   Navigation Hover
+=========================== */
+
+nav ul li a{
+
+    position:relative;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   Logo Animation
+=========================== */
+
+.logo{
+
+    animation:floating 3s infinite;
+
+}
